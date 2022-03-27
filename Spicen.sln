@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Core", "Spicen.Core\Spicen.Core.csproj", "{D0FD5F54-4B08-470D-ABB2-64120C129920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Repository", "Spicen.Repository\Spicen.Repository.csproj", "{4DBA306A-F1F5-41DF-9A20-63136E0408EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Service", "Spicen.Service\Spicen.Service.csproj", "{6C025106-89DC-47A8-9016-4AF71FAE66AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.API", "Spicen.API\Spicen.API.csproj", "{0E2DDCFF-ECA9-492A-A193-E0D46B259D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Web", "Spicen.Web\Spicen.Web.csproj", "{5E2FAEB1-0CD3-4F5A-85A3-E30DC75CE69E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Caching", "Spicen.Caching\Spicen.Caching.csproj", "{612F4C1B-510D-475E-BB20-0DFDC665FAE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0FD5F54-4B08-470D-ABB2-64120C129920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0FD5F54-4B08-470D-ABB2-64120C129920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0FD5F54-4B08-470D-ABB2-64120C129920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0FD5F54-4B08-470D-ABB2-64120C129920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DBA306A-F1F5-41DF-9A20-63136E0408EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBA306A-F1F5-41DF-9A20-63136E0408EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBA306A-F1F5-41DF-9A20-63136E0408EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBA306A-F1F5-41DF-9A20-63136E0408EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C025106-89DC-47A8-9016-4AF71FAE66AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C025106-89DC-47A8-9016-4AF71FAE66AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C025106-89DC-47A8-9016-4AF71FAE66AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C025106-89DC-47A8-9016-4AF71FAE66AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2DDCFF-ECA9-492A-A193-E0D46B259D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2DDCFF-ECA9-492A-A193-E0D46B259D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2DDCFF-ECA9-492A-A193-E0D46B259D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2DDCFF-ECA9-492A-A193-E0D46B259D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E2FAEB1-0CD3-4F5A-85A3-E30DC75CE69E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2FAEB1-0CD3-4F5A-85A3-E30DC75CE69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2FAEB1-0CD3-4F5A-85A3-E30DC75CE69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2FAEB1-0CD3-4F5A-85A3-E30DC75CE69E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612F4C1B-510D-475E-BB20-0DFDC665FAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612F4C1B-510D-475E-BB20-0DFDC665FAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612F4C1B-510D-475E-BB20-0DFDC665FAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612F4C1B-510D-475E-BB20-0DFDC665FAE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ECDAFB3-3B5A-4517-9F1D-4FBAB3347E3B}
+	EndGlobalSection
+EndGlobal
