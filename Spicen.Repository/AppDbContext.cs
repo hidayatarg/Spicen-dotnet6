@@ -3,6 +3,7 @@ using Spicen.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,5 +25,14 @@ namespace Spicen.Repository
         public DbSet<ProductFeature> ProductFeatures { get; set; }
 
 
+        // validations to fields
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // apply configurations in this assembly or
+            // builder.ApplyConfigurationsFromAssembly(GetType().Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
