@@ -30,13 +30,33 @@ namespace Spicen.Repository
         {
             // apply configurations in this assembly or
             // builder.ApplyConfigurationsFromAssembly(GetType().Assembly);
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+           modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             // modelbuilder for productFeature
-            modelBuilder.Entity<ProductFeature>().HasData(
-                new ProductFeature { Id = 1, Color = "red", Height = 100, Width = 200, ProductId = 1 },
-                new ProductFeature { Id = 1, Color = "red", Height = 100, Width = 200, ProductId = 2 }
-                );
+            modelBuilder.Entity<ProductFeature>().HasData(new ProductFeature()
+            {
+                Id = 1,
+                Color = "Kırmızı",
+                Height = 100,
+                Width = 200,
+                ProductId = 1
+
+
+            },
+            new ProductFeature()
+            {
+                Id = 2,
+                Color = "Mavi",
+                Height = 300,
+                Width = 500,
+                ProductId = 2
+
+
+            }
+
+
+            );
+
 
             base.OnModelCreating(modelBuilder);
         }

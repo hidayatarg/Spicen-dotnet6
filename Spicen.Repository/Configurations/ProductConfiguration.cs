@@ -19,7 +19,6 @@ namespace Spicen.Repository.Configurations
             builder.Property(x => x.Stock).IsRequired();
             // 1000000000000000000.00
             builder.Property(x => x.Price).IsRequired().HasColumnType("decimal(18,2)");
-            builder.Property(x => x.ProductFeature).IsRequired();
 
             // corresponding database table
             builder.ToTable("Products");

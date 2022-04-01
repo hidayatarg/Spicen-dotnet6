@@ -3,21 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Core", "Spicen.Core\Spicen.Core.csproj", "{D0FD5F54-4B08-470D-ABB2-64120C129920}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spicen.Core", "Spicen.Core\Spicen.Core.csproj", "{D0FD5F54-4B08-470D-ABB2-64120C129920}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Repository", "Spicen.Repository\Spicen.Repository.csproj", "{4DBA306A-F1F5-41DF-9A20-63136E0408EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spicen.Repository", "Spicen.Repository\Spicen.Repository.csproj", "{4DBA306A-F1F5-41DF-9A20-63136E0408EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Service", "Spicen.Service\Spicen.Service.csproj", "{6C025106-89DC-47A8-9016-4AF71FAE66AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spicen.Service", "Spicen.Service\Spicen.Service.csproj", "{6C025106-89DC-47A8-9016-4AF71FAE66AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.API", "Spicen.API\Spicen.API.csproj", "{0E2DDCFF-ECA9-492A-A193-E0D46B259D77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spicen.API", "Spicen.API\Spicen.API.csproj", "{0E2DDCFF-ECA9-492A-A193-E0D46B259D77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Web", "Spicen.Web\Spicen.Web.csproj", "{5E2FAEB1-0CD3-4F5A-85A3-E30DC75CE69E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spicen.Web", "Spicen.Web\Spicen.Web.csproj", "{5E2FAEB1-0CD3-4F5A-85A3-E30DC75CE69E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spicen.Caching", "Spicen.Caching\Spicen.Caching.csproj", "{612F4C1B-510D-475E-BB20-0DFDC665FAE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spicen.Caching", "Spicen.Caching\Spicen.Caching.csproj", "{612F4C1B-510D-475E-BB20-0DFDC665FAE0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{238FED0E-A44E-41D2-9BD4-7AE6CF50DF23}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Global

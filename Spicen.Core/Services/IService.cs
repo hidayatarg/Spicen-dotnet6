@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Spicen.Core.Services
 {
-    public interface IServices<T> where T : class
+    public interface IService<T> where T : class
     {
         Task<T> GetByIdAsync(int id);
 
