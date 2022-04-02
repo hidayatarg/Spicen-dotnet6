@@ -35,7 +35,7 @@ namespace Spicen.Repository.Repositories
             return await _dbSet.AnyAsync(expression);
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
+        public IQueryable<T> GetAll()
         {
             // use no tracking => it will not put the data into memory
             // good perfomance

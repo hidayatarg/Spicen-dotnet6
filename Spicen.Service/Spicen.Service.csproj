@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Spicen.Core\Spicen.Core.csproj" />
+    <ProjectReference Include="..\Spicen.Repository\Spicen.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

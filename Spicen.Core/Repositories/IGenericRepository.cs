@@ -12,7 +12,7 @@ namespace Spicen.Core.Repositories
         Task<T> GetByIdAsync(int id);
 
         // productRepository.GetAll(x=>x.id>5).orderBy.toList()
-        IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
+        IQueryable<T> GetAll();
 
         // IQueryable run after toList()
         // productRepository.Where(x=>x.id>5).orderBy.toList()

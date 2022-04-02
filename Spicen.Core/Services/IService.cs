@@ -17,9 +17,9 @@ namespace Spicen.Core.Services
 
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
 
-        Task AddAysnc(T entity);
+        Task<T> AddAysnc(T entity);
 
-        Task AddRangeAysnc(IEnumerable<T> entities);
+        Task<IEnumerable<T>> AddRangeAysnc(IEnumerable<T> entities);
 
         Task UpdateAsync(T entity);
 
