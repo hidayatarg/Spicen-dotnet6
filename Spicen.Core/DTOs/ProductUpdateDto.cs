@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Spicen.Core.DTOs
 {
-    internal class ProductUpdateDto
+    public class ProductUpdateDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
