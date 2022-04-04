@@ -6,6 +6,7 @@ using Spicen.Repository;
 using Spicen.Repository.Repositories;
 using Spicen.Repository.UnitOfWorks;
 using Spicen.Service.Mapping;
+using Spicen.Service.Services;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,7 +22,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // for generics
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-//builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
+builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 
 // autoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
