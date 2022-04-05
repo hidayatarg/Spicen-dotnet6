@@ -25,7 +25,7 @@ namespace Spicen.API.Controllers
        {
             var products = await _service.GetAllAsync();
             var productsDtos = _mapper.Map<List<ProductDto>>(products.ToList());
-            return CreateActionResult(CustomResponseDto<List<ProductDto>>.Succcess(200, productsDtos));
+            return CreateActionResult(CustomResponseDto<List<ProductDto>>.Success(200, productsDtos));
        }
 
         // api/products/12
