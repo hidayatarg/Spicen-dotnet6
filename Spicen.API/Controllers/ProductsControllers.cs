@@ -34,7 +34,35 @@ namespace Spicen.API.Controllers
         {
             var product = await _service.GetByIdAsync(id);
             var productDto = _mapper.Map<ProductDto>(product);
-            return CreateActionResult(CustomResponseDto<ProductDto>.Succcess(200, productDto));
+            return CreateActionResult(CustomResponseDto<ProductDto>.Success(200, productDto));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Save(ProductDto productDto)
+        {
+            var product = await _service.AddAysnc(_mapper.Map<Product>(productDto));
+            var productsDto = _mapper.Map<ProductDto>(product);
+            return CreateActionResult(CustomResponseDto<ProductDto>.Success(201, productsDto));
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update(ProductUpdateDto productDto)
+        {
+            await _service.UpdateAsync(_mapper.Map<Product>(productDto));
+            return CreateActionResult(CustomResponseDto<NoContentDto>.Success(204));
+        }
+
+        // api/products/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Remove(int id)
+        {
+            var product = await _service.GetByIdAsync(id);
+            if(product == null)
+            {
+                return CreateActionResult(CustomResponseDto<NoContentDto>.Fail(404, $"No Product Exists with id={id}"));
+            }
+            await _service.RemoveAsync(product);
+            return CreateActionResult(CustomResponseDto<NoContentDto>.Success(204));
         }
     }
 }

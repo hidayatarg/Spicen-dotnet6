@@ -20,7 +20,7 @@ namespace Spicen.Core.DTOs
 
         public List<string> Errors { get; set; }
 
-        public static CustomResponseDto<T> Succcess(int statusCode, T Data)
+        public static CustomResponseDto<T> Success(int statusCode, T Data)
         {
             return new CustomResponseDto<T> { Data = Data, StatusCode = statusCode };
         }
