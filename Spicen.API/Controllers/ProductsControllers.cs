@@ -12,12 +12,14 @@ namespace Spicen.API.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IService<Product> _service;
+        private readonly IProductService _productService;
 
         // DI
-        public ProductsControllers(IService<Product> service, IMapper mapper)
+        public ProductsControllers(IService<Product> service, IMapper mapper, IProductService productService)
         {
             _mapper = mapper;
             _service = service;
+            _productService = productService;
         }
 
        [HttpGet]
@@ -63,6 +65,13 @@ namespace Spicen.API.Controllers
             }
             await _service.RemoveAsync(product);
             return CreateActionResult(CustomResponseDto<NoContentDto>.Success(204));
+        }
+
+        // api/products/GetProductsWithCategory
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetProductsWithCategory()
+        {
+            return CreateActionResult(await _productService.GetProductsWithCategory());
         }
     }
 }
