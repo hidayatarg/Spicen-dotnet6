@@ -9,7 +9,7 @@ namespace Spicen.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductControllers : ControllerBase
+    public class ProductControllers : CustomBaseController
     {
         private readonly IMapper _mapper;
         private readonly IService<Product> _service;
@@ -26,11 +26,8 @@ namespace Spicen.API.Controllers
             var products = await _service.GetAllAsync();
 
             var productsDtos = _mapper.Map<List<ProductDto>>(products.ToList());
-            return Ok(CustomResponseDto<List<ProductDto>>.Succcess(200, productsDtos);
+
+            return CreateActionResult<List<ProductDto>>(CustomResponseDto<List<ProductDto>>.Succcess(200, productsDtos));
        }
-
-
-        
-
     }
 }
