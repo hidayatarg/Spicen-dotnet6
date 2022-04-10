@@ -3,6 +3,7 @@ using Spicen.Core.Repositories;
 using Spicen.Core.Services;
 using Spicen.Core.UnitOfWorks;
 using Spicen.Repository;
+using Spicen.Service.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +50,14 @@ namespace Spicen.Service.Services
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+            var hasProduct = await _repository.GetByIdAsync(id);
+            
+            if(hasProduct == null)
+            {
+                throw new NotFoundException($"{typeof(T).Name} ({id}) does not exist");
+            }
+
+            return hasProduct;
         }
 
         public async Task RemoveAsync(T entity)
