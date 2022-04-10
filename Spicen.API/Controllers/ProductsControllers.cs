@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Spicen.API.Filters;
 using Spicen.Core;
 using Spicen.Core.DTOs;
 using Spicen.Core.Services;
@@ -30,16 +31,12 @@ namespace Spicen.API.Controllers
             return CreateActionResult(CustomResponseDto<List<ProductDto>>.Success(200, productsDtos));
        }
 
+        [ServiceFilter(typeof(NotFoundFilter<Product>))]
         // api/products/12
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var product = await _service.GetByIdAsync(id);
-            if (product == null)
-            {
-                return CreateActionResult(CustomResponseDto<ProductDto>.Fail(400, $"Product with {id} Not Found"));
-            }
-
             var productDto = _mapper.Map<ProductDto>(product);
             return CreateActionResult(CustomResponseDto<ProductDto>.Success(200, productDto));
         }
