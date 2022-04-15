@@ -1,8 +1,11 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Spicen.API.Filters;
 using Spicen.API.Middlewares;
+using Spicen.API.Modules;
 using Spicen.Core.Repositories;
 using Spicen.Core.Services;
 using Spicen.Core.UnitOfWorks;
@@ -30,18 +33,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // DI Scopes
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-// for generics
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
+
 builder.Services.AddScoped(typeof(NotFoundFilter<>));
 // autoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-
 
 // sqlserver connections
 builder.Services.AddDbContext<AppDbContext>(x =>
@@ -52,6 +47,10 @@ builder.Services.AddDbContext<AppDbContext>(x =>
         sqlOptions.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
     });
 });
+
+// Ioc Autofac
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
 
 var app = builder.Build();
 
