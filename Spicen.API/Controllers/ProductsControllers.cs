@@ -12,15 +12,13 @@ namespace Spicen.API.Controllers
     public class ProductsControllers : CustomBaseController
     {
         private readonly IMapper _mapper;
-        private readonly IService<Product> _service;
-        private readonly IProductService _productService;
+        private readonly IProductService _service;
 
         // DI
-        public ProductsControllers(IService<Product> service, IMapper mapper, IProductService productService)
+        public ProductsControllers(IMapper mapper, IProductService productService)
         {
             _mapper = mapper;
-            _service = service;
-            _productService = productService;
+            _service = productService;
         }
 
        [HttpGet]
@@ -73,7 +71,7 @@ namespace Spicen.API.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> GetProductsWithCategory()
         {
-            return CreateActionResult(await _productService.GetProductsWithCategory());
+            return CreateActionResult(await _service.GetProductsWithCategory());
         }
     }
 }

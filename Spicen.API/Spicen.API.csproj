@@ -16,8 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Spicen.Repository\Spicen.Repository.csproj" />
-    <ProjectReference Include="..\Spicen.Service\Spicen.Service.csproj" />
+    <ProjectReference Include="..\Spicen.Caching\Spicen.Caching.csproj" />
   </ItemGroup>
 
 </Project>

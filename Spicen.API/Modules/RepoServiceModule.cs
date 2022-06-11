@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Spicen.Caching;
 using Spicen.Core.Repositories;
 using Spicen.Core.Services;
 using Spicen.Core.UnitOfWorks;
@@ -43,6 +44,9 @@ namespace Spicen.API.Modules
                 .Where(x => x.Name.EndsWith("Service"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
+
         }
     }
 }
