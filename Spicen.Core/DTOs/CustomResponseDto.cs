@@ -25,7 +25,7 @@ namespace Spicen.Core.DTOs
             return new CustomResponseDto<T> { Data = Data, StatusCode = statusCode };
         }
 
-        public static CustomResponseDto<T> Success(int statusCode)
+        public static CustomResponseDto<T> Success(int statusCode, ProductWithCategoryDto productsWithCategoryDto)
         {
             return new CustomResponseDto<T> { StatusCode=statusCode };
         }
