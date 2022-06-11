@@ -89,7 +89,7 @@ namespace Spicen.Caching
             //// Cache data need to converted to DTO
             var products = _memoryCache.Get<IEnumerable<Product>>(CacheProductKey);
 
-            var productsWithCategoryDto = _mapper.Map<ProductWithCategoryDto>(products);
+            var productsWithCategoryDto = _mapper.Map<List<ProductWithCategoryDto>>(products);
 
             return Task.FromResult(CustomResponseDto<List<ProductWithCategoryDto>>.Success(200, productsWithCategoryDto));
         }
