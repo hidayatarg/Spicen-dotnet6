@@ -20,5 +20,12 @@ namespace Spicen.Web.Controllers
 
             return View(response.Data);
         }
+
+        public async Task<IActionResult> NonMemory()
+        {
+            var response = await _service.GetProductsWithCategory();
+
+            return View(response.Data);
+        }
     }
 }
